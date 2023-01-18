@@ -1,0 +1,173 @@
+* {
+  list-style: none;
+  /* user-select: none; */
+}
+#toggleText {
+  user-select: none;
+}
+.con {
+  height: auto;
+  display: flex;
+}
+.main {
+  display: flex;
+  width: 65%;
+  min-height: 125vh;
+  max-height: auto;
+  /* border: 1px solid red; */
+}
+
+.personalinfo {
+  border: 1px solid white;
+  border-radius: 10px;
+  margin-top: 25px;
+  width: 46%;
+  margin: 10px 35px;
+  display: inline-block;
+}
+.btn {
+  width: 15%;
+  text-align: center;
+}
+.hr {
+  background-color: #ffea00 !important;
+  margin: 20px 0px;
+  height: 2px;
+}
+.leftSide {
+  /* margin: 20px 20px; */
+  padding: 10px;
+  width: 34%;
+  background-color: #28282b;
+  color: white;
+  border: 1px solid white;
+}
+#profile {
+  width: 65%;
+  margin: 15px 20px;
+  /* border: 1px solid red; */
+  border-radius: 50%;
+}
+.basicInfo {
+  /* border: 1px solid red; */
+  margin: 10px 2px;
+  padding: 0px;
+}
+.basicInfo li {
+  /* border: 1px solid red; */
+  background-color: #28282b;
+}
+.cv_P {
+  /* border: 1px solid red; */
+  /* display: block; */
+  margin: 10px 3px;
+  overflow-wrap: break-word;
+}
+
+.righSide {
+  border: 1px solid white;
+
+  /* margin: 20px -20px; */
+  padding: 10px;
+
+  width: 95%;
+  background-image: url("https://flevix.com/wp-content/uploads/2019/12/Live-Background-1.svg");
+  background-position: right;
+}
+
+#cv_main {
+  display: none;
+  /* border: 1px solid black; */
+}
+.darkmode {
+  color: white;
+  background-color: black;
+}
+#generateCV {
+  width: 15%;
+  height: 8%;
+  font-size: 20px;
+  padding: 10px 10px;
+}
+i {
+  margin-right: 10px;
+}
+#address {
+  /* border : 1px solid red; */
+  width: 100%;
+}
+.address {
+  /* border: 1px solid red; */
+  display: flex;
+}
+
+.alert {
+  border-left: 4px solid #ffa502;
+  position: absolute;
+  right: 10px;
+  top: 40px;
+  z-index: 2;
+  min-width: 30%;
+  padding: 14px 20px;
+  background-color: #ffdb9b;
+  color: #ce8500;
+  font-family: sans-serif;
+}
+.hide{
+    display: none;
+
+}
+.show{
+    animation: show_alert 1s ease forwards;
+}
+@keyframes show_alert {
+    0%{
+transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(-10px);
+    }
+}
+.fa-exclamation-circle{
+    /* border: 1px solid red; */
+    color: #ce8500;
+    font-size: 24px;
+    margin: 5px 12px;
+    /* padding: 4px 10px; */
+}
+.msg{
+    /* border: 1px solid red; */
+    padding: 0px 5px;
+font-size:  18px;
+margin-left: -12px;
+}
+.close-btn{
+    padding: 14px 24px;
+    background-color: #ffd080;
+font-size: 22px;
+
+    /* border: 1px solid red; */
+    position: absolute;
+    top: 0px;
+    right: 1px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.close-btn:hover{
+    background-color: #ffc776;
+}
+#success{
+  border-left: 4px solid #07a414;
+    background-color: #60ff60;
+    color: green;
+}
+#close-alert-success{
+    background-color: #00e013;
+}
+#close-alert-success:hover{
+    background-color: #00e013;
+}
+.s_icon{
+    color: green;
+}
