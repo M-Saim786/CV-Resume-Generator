@@ -63,21 +63,19 @@ skillBtn.addEventListener("click", () => {
 var cv_workingEx = document.getElementById("cv_workingEx");
 var cv_qual = document.getElementById("cv_qual");
 var cv_skills = document.getElementById("cv_skills");
-
 //              Main Fucntion
 
 var generatebtn = document.getElementById("generateCV");
 generatebtn.addEventListener("click", function (e) {
   e.preventDefault();
   // console.log(yname);
-  var alertshow = document.getElementById("alert");
-  var close_alert = document.getElementById("close-alert");
-  var success_alert = document.getElementById("success");
-  close_alert.addEventListener("click", function () {
-    alertshow.classList.add("hide");
-  });
-  console.log(alertshow);
-
+var alertshow = document.getElementById("alert");
+var close_alert = document.getElementById("close-alert")
+var success_alert= document.getElementById('success')
+close_alert.addEventListener("click", function(){
+  alertshow.classList.add("hide")
+})
+console.log(alertshow);
   if (
     (yname.value,
     email.value,
@@ -90,15 +88,17 @@ generatebtn.addEventListener("click", function (e) {
     objective.value,
     experience[0].value,
     qualification[0].value,
-    skills[0].value == "")
-  ) {
-    // alert("click");
-    alertshow.classList.remove("hide");
-
-    setTimeout(() => {
-      alertshow.classList.add("hide");
-    }, 1500);
-    window.scrollTo(0, 0);
+    skills[0].value
+    == "") 
+  ) {    
+      // alert("click");
+      alertshow.classList.remove('hide')
+   
+      setTimeout(() => {
+        alertshow.classList.add('hide')
+      
+      }, 1500);
+      window.scrollTo(0,0)
   } else {
     // personal side
 
@@ -115,16 +115,15 @@ generatebtn.addEventListener("click", function (e) {
     // professional side
     document.getElementById("cv_objective").innerText = objective.value;
     qwe = "";
-    let num = 1
     for (var i of experience) {
-      qwe = qwe + `<li>${num++}. ${i.value}</li>`;
-      console.log(qwe);
+      qwe = qwe + `<li>${i.value}</li>`;
+      // console.log(qwe);
       cv_workingEx.innerHTML = `${qwe}`;
     }
     qual = "";
     for (var j of qualification) {
-      qual = qual + `<li>${num++}. ${j.value}<br></li>`;
-      console.log(qual);
+      qual = qual + `<li>${j.value}</li>`;
+      // console.log(qual);
       cv_qual.innerHTML = `${qual}`;
     }
     var skilli = "";
@@ -134,17 +133,16 @@ generatebtn.addEventListener("click", function (e) {
     }
     var CV_main = document.getElementById("cv_main");
     CV_main.style.display = "flex";
-    var btn_section  = document.getElementById('btn_section')
-    btn_section.classList.remove('hide')
 
-    success_alert.classList.remove("hide");
-    setTimeout(() => {
-      success_alert.classList.add("hide");
-    }, 1500);
-    window.scroll(0, 0);
+    success_alert.classList.remove('hide')
+setTimeout(() => {
+  // success_alert.classList.add('hide')
+
+}, 1500);
+    window.scroll(0,0)
+
 
     // Getting Image  Dynamically
-
     var img = document.getElementById("img").files[0];
     console.log(img);
     var reader = new FileReader();
@@ -156,7 +154,32 @@ generatebtn.addEventListener("click", function (e) {
     };
     setTimeout(() => {
       generatebtn.classList.add("btn-success");
-      CV_main.style.display = "flex";
+      // CV_main.style.display = 'block'
     }, 100);
+    
+  }
+
+});
+
+// Dark Mode
+var cv_RightSide = document.getElementById("rightSide");
+// console.log(cv_RightSide);
+var darkmode = document.getElementById("darkmode");
+darkmode.addEventListener("click", function () {
+  // e.preventDefault();
+  var body = document.body;
+  body.classList.toggle("darkmode");
+  cv_RightSide.classList.toggle("darkmode");
+  nav = document.getElementsByClassName("navbar");
+  nav[0].classList.toggle("bg-dark");
+  nav[0].classList.toggle("navbar-dark");
+  toggleText = document.getElementById("toggleText");
+  if (body.classList == "darkmode") {
+    toggleText.innerText = "Disable Dark Mode";
+  } else {
+    toggleText.innerText = "Enable Dark Mode";
   }
 });
+
+// usign firebsae
+// console.log(firebase())

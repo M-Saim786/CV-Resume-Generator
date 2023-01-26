@@ -1,5 +1,6 @@
 * {
   list-style: none;
+  /* user-select: none; */
 }
 #toggleText {
   user-select: none;
@@ -13,7 +14,7 @@
   width: 65%;
   min-height: 125vh;
   max-height: auto;
-  /* border: 1px solid rgb(0, 0, 0); */
+  /* border: 1px solid red; */
 }
 
 .personalinfo {
@@ -24,10 +25,6 @@
   margin: 10px 35px;
   display: inline-block;
 }
-.textarea {
-  /* border: 1px solid red; */
-  height: 25vh;
-}
 .btn {
   width: 15%;
   text-align: center;
@@ -37,33 +34,19 @@
   margin: 20px 0px;
   height: 2px;
 }
-
 .leftSide {
-  margin: -1px 0px;
-  margin-left: -13px;
+  /* margin: 20px 20px; */
   padding: 10px;
-  width: 36%;
+  width: 34%;
   background-color: #28282b;
   color: white;
   border: 1px solid white;
 }
 #profile {
-  width: 62%;
-  margin: 15px 35px;
-  border: 3px solid white;
+  width: 65%;
+  margin: 15px 20px;
+  /* border: 1px solid red; */
   border-radius: 50%;
-  height: 22vh;
-}
-#btn_section{
-  position: absolute;
-  right: 250px;
-  margin-top: 10px;
-  color: white;
-transition: all 0.4s ;
-}
-#btn_section:hover{
-  color: black;
-
 }
 .basicInfo {
   /* border: 1px solid red; */
@@ -76,18 +59,26 @@ transition: all 0.4s ;
 }
 .cv_P {
   /* border: 1px solid red; */
+  /* display: block; */
   margin: 10px 3px;
   overflow-wrap: break-word;
 }
 
 .righSide {
   border: 1px solid white;
+
+  /* margin: 20px -20px; */
   padding: 10px;
+
   width: 95%;
   background-image: url("https://flevix.com/wp-content/uploads/2019/12/Live-Background-1.svg");
   background-position: right;
 }
 
+#cv_main {
+  display: none;
+  /* border: 1px solid black; */
+}
 .darkmode {
   color: white;
   background-color: black;
@@ -105,7 +96,11 @@ i {
   /* border : 1px solid red; */
   width: 100%;
 }
-/*        Alert  */
+.address {
+  /* border: 1px solid red; */
+  display: flex;
+}
+
 .alert {
   border-left: 4px solid #ffa502;
   position: absolute;
@@ -118,58 +113,61 @@ i {
   color: #ce8500;
   font-family: sans-serif;
 }
-.hide {
-  display: none;
+.hide{
+    display: none;
+
 }
-.show {
-  animation: show_alert 1s ease forwards;
+.show{
+    animation: show_alert 1s ease forwards;
 }
 @keyframes show_alert {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(-10px);
-  }
+    0%{
+transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(-10px);
+    }
 }
-.fa-exclamation-circle {
-  /* border: 1px solid red; */
-  color: #ce8500;
-  font-size: 24px;
-  margin: 5px 12px;
+.fa-exclamation-circle{
+    /* border: 1px solid red; */
+    color: #ce8500;
+    font-size: 24px;
+    margin: 5px 12px;
+    /* padding: 4px 10px; */
 }
-.msg {
-  /* border: 1px solid red; */
-  padding: 0px 5px;
-  font-size: 18px;
-  margin-left: -12px;
+.msg{
+    /* border: 1px solid red; */
+    padding: 0px 5px;
+font-size:  18px;
+margin-left: -12px;
 }
-.close-btn {
-  padding: 14px 24px;
-  background-color: #ffd080;
-  font-size: 22px;
-  /* border: 1px solid red; */
-  position: absolute;
-  top: 0px;
-  right: 1px;
-  border-radius: 5px;
-  cursor: pointer;
+.close-btn{
+    padding: 14px 24px;
+    background-color: #ffd080;
+font-size: 22px;
+
+    /* border: 1px solid red; */
+    position: absolute;
+    top: 0px;
+    right: 1px;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-.close-btn:hover {
-  background-color: #ffc776;
+.close-btn:hover{
+    background-color: #ffc776;
 }
-#success {
+#success{
   border-left: 4px solid #07a414;
-  background-color: #60ff60;
-  color: green;
+    background-color: #60ff60;
+    color: green;
 }
-#close-alert-success {
-  background-color: #00e013;
+#close-alert-success{
+    background-color: #00e013;
 }
-#close-alert-success:hover {
-  background-color: #00e013;
+#close-alert-success:hover{
+    background-color: #00e013;
 }
-.s_icon {
-  color: green;
+.s_icon{
+    color: green;
 }
